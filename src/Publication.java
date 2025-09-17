@@ -1,9 +1,10 @@
 import java.util.Objects;
 
-public abstract class Publication {
+public abstract class Publication implements Printable {
     private String title;
     private String author;
     private int year;
+    private static int publicationCount = 0; // счетчик созданных публикаций
 
 
     // Создание конструктора, гетеров и сетеров
@@ -11,6 +12,11 @@ public abstract class Publication {
         this.title = title;
         this.author = author;
         this.year = year;
+        publicationCount++;
+    }
+
+    public static int getPublicationCount() {
+        return publicationCount;
     }
 
     public String getTitle() {
@@ -59,5 +65,10 @@ public abstract class Publication {
     @Override
     public int hashCode() {
         return Objects.hash(title, author, year);
+    }
+
+    @Override
+    public void printDetails() {
+
     }
 }
