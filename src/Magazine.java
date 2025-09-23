@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Magazine extends Publication {
     private int issueNumber;
 
@@ -12,5 +14,40 @@ public class Magazine extends Publication {
 
     public void setIssueNumber(int issueNumber) {
         this.issueNumber = issueNumber;
+    }
+
+    @Override
+    public void printDetails() {
+        System.out.println("Type: " + getType()+
+                "\nTitle: "+getTitle()+
+                "\nAuthor: " +getAuthor()+
+                "\nYear: "+ getYear()+
+                "\nISBN: " +getIssueNumber());
+    }
+
+    @Override
+    public String getType() {
+        return "Type Magazine";
+    }
+
+    @Override
+    public String toString() {
+        return "Magazine{" +
+                "issueNumber=" + issueNumber +
+                "} " + super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Magazine magazine = (Magazine) o;
+        return issueNumber == magazine.issueNumber;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), issueNumber);
     }
 }

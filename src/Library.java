@@ -17,6 +17,7 @@ public class Library {
         publications.forEach(System.out::println);
     }
 
+    // Поиск книги по автору
     public void searchByAuthor(String author){
 
         List<Publication> result = new ArrayList<>();// Создание вспомогательного массива

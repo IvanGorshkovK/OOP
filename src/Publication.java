@@ -69,6 +69,9 @@ public abstract class Publication implements Printable {
 
     @Override
     public void printDetails() {
-
+        System.out.println("Title:" +getTitle()+
+                "\nAuthor: "+ getAuthor()+
+                "nYear: "+ getYear());
     }
+    public abstract String getType();
 }
