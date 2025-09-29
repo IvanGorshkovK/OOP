@@ -4,13 +4,14 @@ import java.util.List;
 public class Library {
     private List<Publication> publications;
 
-    public Library(List<Publication> publications) {
-        this.publications = publications;
+    public Library() {
+        this.publications = new ArrayList<>();
     }
 
     //Добавление публикации в каталог
     public void addPublication(Publication pub) {
         publications.add(pub);
+        Publication.increasePublicationCount();
     }
     // вывод всех публикаций
     public void listPublications(){

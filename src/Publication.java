@@ -12,13 +12,19 @@ public abstract class Publication implements Printable {
         this.title = title;
         this.author = author;
         this.year = year;
-        publicationCount++;
+
     }
 
     public static int getPublicationCount() {
         return publicationCount;
     }
 
+    //Метод увеличения счетчика публикаций
+    public static void increasePublicationCount() {
+        publicationCount++;
+    }
+
+    //
     public String getTitle() {
         return title;
     }
