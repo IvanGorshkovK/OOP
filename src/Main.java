@@ -30,6 +30,7 @@ public class Main {
                     int year = scanner.nextInt();
                     scanner.nextLine();
 
+
                     if(type == 1){
                         System.out.println("Введите ISBN");
                         String ISBN = scanner.nextLine();

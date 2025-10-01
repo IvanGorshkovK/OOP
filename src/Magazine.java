@@ -22,7 +22,7 @@ public class Magazine extends Publication {
                 "\nTitle: "+getTitle()+
                 "\nAuthor: " +getAuthor()+
                 "\nYear: "+ getYear()+
-                "\nISBN: " +getIssueNumber());
+                "\nissueNumber: " +getIssueNumber());
     }
 
     @Override

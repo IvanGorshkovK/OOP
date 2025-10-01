@@ -27,7 +27,7 @@ public class Newspaper extends  Publication {
                 "\nTitle: "+getTitle()+
                 "\nAuthor: " +getAuthor()+
                 "\nYear: "+ getYear()+
-                "\nISBN: " +getPublicationDay());
+                "\npublicationDay " +getPublicationDay());
     }
 
     @Override
